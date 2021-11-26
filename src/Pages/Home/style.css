@@ -1,0 +1,139 @@
+header{
+    height: 70px;
+    background-color: #a2b9e1;
+    border-bottom: 3px solid #20549cb9;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 9;
+}
+
+/* Header Logo */
+header .logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 20px;
+    margin-left: 5px;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    transition: all 1s;
+}
+header .logo-container img{
+    width: 50px;
+    margin-right:10px;
+}
+header .logo-container span{
+    font-size: 1.2em;
+    color: black;
+}
+header .logo-container:hover{
+    box-shadow: 0 0 10px rgba(100,0,0,0.8);
+}
+
+/* Header Nav Main */
+header .nav-main{
+    width: 100%;
+    align-self: flex-end;
+}
+header .nav-main ul{
+    list-style: none;
+    margin-right: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+header .nav-main ul li{
+    margin-bottom: 10px;
+    transition: all 1s;
+}
+header .nav-main ul li:hover{
+    transform: translateY(-10px);
+}
+header .nav-main ul li .link{
+    border-radius: 5px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 10px 20px;
+    color: black;
+    font-size: 1.1em;
+    text-decoration: none;
+    border-top: 3px solid #20549c6c;
+    border-right: 2px solid #20549c80;
+    transition: background-color 1s, padding 1s;
+}
+header .nav-main ul li .link.first-list{
+       border-left: 2px solid #20549c7e; 
+}
+header .nav-main ul li .link:hover{
+    background-color: rgba(255,255,255,.4);
+    border-left: 2px solid #20549c7e; 
+    padding-bottom: 20px;
+}
+
+/* Heade Toggler Container */
+header .toggle-container img.open:hover{
+    transform: rotate(90deg);
+}
+header .toggle-container img.none{
+    display: none;
+}
+header .toggle-container img{
+    width: 40px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: all 1s;
+}
+header .toggle-container nav.none{
+    transform: scaleY(0);
+}
+header .toggle-container nav{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #dcc493;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding:10px;
+    transition:  all 1s;
+    z-index: 9;
+}
+header .toggle-container nav ul li{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px 0 5px;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+
+}
+header .toggle-container nav ul li .link{
+    text-decoration: none;
+    font-size: 1.2em;
+    color: black;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* Media Query`s */
+@media all and (max-width:750px){
+    header .nav-main{
+        display: none;
+    }
+}
+@media all and (min-width:750px){
+    header .toggle-container{
+        display: none;
+    }
+}
