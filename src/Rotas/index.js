@@ -7,6 +7,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Home from '../Pages/Home'
 import Main from '../Pages/Home/Main'
 import Erro from '../Pages/Erro'
+import Entrar from '../Pages/Entrar'
 
 export default function Rotas(){
     return(
@@ -14,9 +15,10 @@ export default function Rotas(){
             <Routes>
                 <Route path='/' element={<Home/>}>
                     <Route path='/' element={<Main/>}/>
-                    <Route/>
+                    <Route path='/entrar' element={<Entrar/>} />
                 </Route>
                 <Route path='*' element={<Erro/>} />
+                
             </Routes>
         </BrowserRouter>
     )
