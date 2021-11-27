@@ -32,7 +32,7 @@ export default function Home(){
                         <li><Link className='link' to='/'>Carrinho</Link></li>
                         <li><Link className='link' to='/'>Histórico</Link></li>
                         <li><Link className='link' to='/'>Categorias</Link></li>
-                        <li><Link className='link' to='/'>Entrar</Link></li>
+                        <li><Link className='link' to='/entrar'>Entrar</Link></li>
                         <li><Link className='link' to='/'>Contato</Link></li>
                     </ul>
                 </nav>
@@ -45,7 +45,7 @@ export default function Home(){
                             <li><Link className='link' to='/'>Carrinho</Link></li>
                             <li><Link className='link' to='/'>Histórico</Link></li>
                             <li><Link className='link' to='/'>Categorias</Link></li>
-                            <li><Link className='link' to='/'>Entrar</Link></li>
+                            <li><Link className='link' to='/entrar'>Entrar</Link></li>
                             <li><Link className='link' to='/'>Contato</Link></li>
                         </ul>
                     </nav>
@@ -67,7 +67,7 @@ export default function Home(){
                         <li><Link className='link' to='/'>Carrinho</Link></li>
                         <li><Link className='link' to='/'>Histórico</Link></li>
                         <li><Link className='link' to='/'>Categorias</Link></li>
-                        <li><Link className='link' to='/'>Entrar</Link></li>
+                        <li><Link className='link' to='/entrar'>Entrar</Link></li>
                         <li><Link className='link' to='/'>Contato</Link></li>
                     </ul>
                 </nav>
