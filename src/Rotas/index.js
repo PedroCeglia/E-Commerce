@@ -6,6 +6,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 // Import Widgets
 import Home from '../Pages/Home'
 import Main from '../Pages/Home/Main'
+import Erro from '../Pages/Erro'
 
 export default function Rotas(){
     return(
@@ -15,6 +16,7 @@ export default function Rotas(){
                     <Route path='/' element={<Main/>}/>
                     <Route/>
                 </Route>
+                <Route path='*' element={<Erro/>} />
             </Routes>
         </BrowserRouter>
     )
