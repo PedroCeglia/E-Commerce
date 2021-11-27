@@ -1,0 +1,71 @@
+.entrar-content{
+    margin: 70px auto;
+    width: 80vw;
+    min-width: 270px;
+    min-height: 70vh;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.entrar-content .log-container{
+    max-width: 40vw;
+    width: 100%;
+    min-width: 270px;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.entrar-content .log-container.divisor{
+    border-right: 2px solid rgba(0,0,0,.2);
+}
+
+.entrar-content .log-container div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.entrar-content .log-container div h2{
+    margin-bottom: 20px;
+    font-family: 'Outfit', sans-serif;
+}
+.entrar-content .log-container div input{
+    width: 90%;
+    max-width: 270px;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid rgba(0,0,0,.1);
+    font-family: 'Outfit', sans-serif;
+
+    margin-bottom: 20px;
+
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+}
+.entrar-content .log-container div button{
+    width: 90%;
+    max-width: 270px;
+    padding: 10px 20px;
+    background-color: #b8dde5;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,.1);
+    font-family: 'Outfit', sans-serif;
+    cursor: pointer;
+}
+
+/* Media Query´s */
+@media all and (max-width:770px){
+    .entrar-content .log-container.divisor{
+    border-right: 0px solid rgba(0,0,0,.2);
+    border-bottom: 2px solid rgba(0,0,0,.2);
+    max-width:100%;
+    }
+}
