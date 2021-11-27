@@ -20,7 +20,7 @@ export default function Home(){
 
 
     return(
-        <div>
+        <div className='home-container'>
             <header>
                 <Link to='/' className='logo-container'>
                    <img src='../assets/logo.png' alt='Logo Icon'/>
@@ -32,6 +32,7 @@ export default function Home(){
                         <li><Link className='link' to='/'>Carrinho</Link></li>
                         <li><Link className='link' to='/'>Histórico</Link></li>
                         <li><Link className='link' to='/'>Categorias</Link></li>
+                        <li><Link className='link' to='/'>Entrar</Link></li>
                         <li><Link className='link' to='/'>Contato</Link></li>
                     </ul>
                 </nav>
@@ -44,6 +45,7 @@ export default function Home(){
                             <li><Link className='link' to='/'>Carrinho</Link></li>
                             <li><Link className='link' to='/'>Histórico</Link></li>
                             <li><Link className='link' to='/'>Categorias</Link></li>
+                            <li><Link className='link' to='/'>Entrar</Link></li>
                             <li><Link className='link' to='/'>Contato</Link></li>
                         </ul>
                     </nav>
@@ -54,6 +56,22 @@ export default function Home(){
             <div className='outlet-container'>
                 <Outlet/>
             </div>
+            <footer>
+                <Link to='/' className='logo-container'>
+                   <img src='../assets/logo.png' alt='Logo Icon'/>
+                   <span>TecNine</span> 
+                </Link>
+                <nav className='nav-main'>
+                    <ul>
+                        <li><Link className='link first-list' to='/'>Home</Link></li>
+                        <li><Link className='link' to='/'>Carrinho</Link></li>
+                        <li><Link className='link' to='/'>Histórico</Link></li>
+                        <li><Link className='link' to='/'>Categorias</Link></li>
+                        <li><Link className='link' to='/'>Entrar</Link></li>
+                        <li><Link className='link' to='/'>Contato</Link></li>
+                    </ul>
+                </nav>
+            </footer>
         </div>
     )
 }
