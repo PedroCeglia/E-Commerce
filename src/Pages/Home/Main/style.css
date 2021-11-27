@@ -3,5 +3,75 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
+    min-height:calc(100vh - 70px);
+}
+/* Section Mais Vendidos */
+.main-container .mais-vendidos{
+    width: 80vw;
+
+    display: flex;
+    flex-flow: row wrap;
+    -ms-flex-flow:row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.main-container h2{
+    border-top: 1px solid rgba(0,0,0,.1);
+    padding: 20px 0 10px;
+    width: 100%;
+    font-family: 'Outfit', sans-serif;
+    text-align: center;
 }
 
+.main-container .mais-vendidos article{
+    width: 300px;
+    height: 270px;
+
+    margin: 10px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    
+    background-color: rgba(255,255,255,.7);
+    border-radius: 10px;
+
+    transition: all .4s;
+
+    cursor: pointer;
+}
+.main-container .mais-vendidos article div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.main-container .mais-vendidos article div .produto{
+    font-size: 1.2em;
+}
+.main-container .mais-vendidos article div .preco{
+    font-size: 1.3em;
+    font-family: 'Outfit', sans-serif;
+    color: seagreen;
+}
+.main-container .mais-vendidos article div .preco span{
+    font-size: 0.8em;
+    margin-left: 10px;
+    letter-spacing: 1px;
+    color: rgb(184, 7, 7);
+    font-weight: bold;
+    font-family: 'Amatic SC', cursive;
+    text-decoration: line-through;
+}
+
+.main-container .mais-vendidos img{
+    width: 280px;
+    height: 200px;
+    margin-top: 5px;
+    border-radius: 10px;
+}
