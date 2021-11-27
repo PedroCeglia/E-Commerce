@@ -1,5 +1,6 @@
 /* Mais Vendidos Section */ 
 .carrosel-produtos{
+    margin: 40px 0;
     width: 90vw;
     height: 300px;
 }
