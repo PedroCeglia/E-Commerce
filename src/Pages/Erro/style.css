@@ -1,0 +1,38 @@
+.erro-container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #6faed7;
+}
+.erro-container .erro-content{
+    width: 30vw;
+    min-height: 280px;
+    height: 50vh;
+
+    box-shadow: 0 0 10px #f3f3f3;
+    border-radius: 10px;
+
+    background-color: #b8dde5;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.erro-container .erro-content span{
+    font-family: 'Outfit', sans-serif;
+    margin: 20px 0;
+    font-size: 1.3em;
+}
+.erro-container .erro-content a{
+    font-family: 'Amatic SC', cursive;
+    font-size: 2em;
+    text-decoration: none;
+}
+.erro-container .erro-content h2{
+    font-family: 'Amatic SC', cursive;
+    font-size: 3em;
+}
