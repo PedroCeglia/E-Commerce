@@ -26,7 +26,7 @@
 
 .main-container .mais-vendidos article{
     width: 300px;
-    height: 270px;
+    height: 100%;
 
     margin: 10px 0;
 
@@ -41,8 +41,29 @@
     border-radius: 10px;
 
     transition: all .4s;
+}
+.main-container .mais-vendidos article button{
+    width: 70%;
+    background-color: seagreen;
+    border:1px solid rgba(0,0,0,.1);
+    margin-bottom: 10px;
+    border-radius: 5px;
 
     cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-container .mais-vendidos article button span{
+    font-size: 1.2em;
+    color: rgba(255,255,255,.9);
+    margin-right: 5px;
+}
+.main-container .mais-vendidos article button img{
+    width: 20px;
+    height: 20px;
+    margin-bottom: 5px;
 }
 .main-container .mais-vendidos article div{
     display: flex;

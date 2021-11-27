@@ -16,6 +16,10 @@ export default function Main(){
                         <span className='produto'>Nome do Produto</span>
                         <span className='preco'>R$100<span>R$200</span></span>
                     </div>
+                    <button>
+                        <span>Adicionar ao Carrinho</span>
+                        <img src='assets/carrinho.png' alt='Carrinho Icon'/>
+                    </button>
                 </article>
                 <article>
                     <img src='../assets/fone-de-ouvido-jbl.jpeg' alt='Produto'/>
@@ -23,6 +27,10 @@ export default function Main(){
                         <span className='produto'>Nome do Produto</span>
                         <span className='preco'>R$100<span>R$200</span></span>
                     </div>
+                    <button>
+                        <span>Adicionar ao Carrinho</span>
+                        <img src='assets/carrinho.png' alt='Carrinho Icon'/>
+                    </button>
                 </article>
                 <article>
                     <img src='../assets/fone-de-ouvido-jbl.jpeg' alt='Produto'/>
@@ -30,6 +38,10 @@ export default function Main(){
                         <span className='produto'>Nome do Produto</span>
                         <span className='preco'>R$100<span>R$200</span></span>
                     </div>
+                    <button>
+                        <span>Adicionar ao Carrinho</span>
+                        <img src='assets/carrinho.png' alt='Carrinho Icon'/>
+                    </button>
                 </article>
                 <article>
                     <img src='../assets/fone-de-ouvido-jbl.jpeg' alt='Produto'/>
@@ -37,6 +49,10 @@ export default function Main(){
                         <span className='produto'>Nome do Produto</span>
                         <span className='preco'>R$100<span>R$200</span></span>
                     </div>
+                    <button>
+                        <span>Adicionar ao Carrinho</span>
+                        <img src='assets/carrinho.png' alt='Carrinho Icon'/>
+                    </button>
                 </article>
                 <article>
                     <img src='../assets/fone-de-ouvido-jbl.jpeg' alt='Produto'/>
@@ -44,7 +60,22 @@ export default function Main(){
                         <span className='produto'>Nome do Produto</span>
                         <span className='preco'>R$100<span>R$200</span></span>
                     </div>
-                </article>    
+                    <button>
+                        <span>Adicionar ao Carrinho</span>
+                        <img src='assets/carrinho.png' alt='Carrinho Icon'/>
+                    </button>
+                </article>
+                <article>
+                    <img src='../assets/fone-de-ouvido-jbl.jpeg' alt='Produto'/>
+                    <div>
+                        <span className='produto'>Nome do Produto</span>
+                        <span className='preco'>R$100<span>R$200</span></span>
+                    </div>
+                    <button>
+                        <span>Adicionar ao Carrinho</span>
+                        <img src='assets/carrinho.png' alt='Carrinho Icon'/>
+                    </button>
+                </article>
             </section>
             <section className='categorias'></section>
         </div>
