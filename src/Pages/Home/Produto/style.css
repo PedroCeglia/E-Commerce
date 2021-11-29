@@ -1,0 +1,130 @@
+.produto-container{
+    min-height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.produto-container .produto-container-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.produto-container .produto-container-main .produto-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 400px;
+    height: 500px;
+    background-color: #dfeded;
+    margin: 16px 20px 0;
+    padding:20px;
+    border-radius: 5px;
+}
+.produto-container .produto-container-main .produto-info h2{
+    font-family: 'Outfit', sans-serif;
+    font-size: 2em;
+    cursor: default;
+}
+
+.produto-container .produto-container-main .produto-info .desconto-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin: 20px 0;
+    padding: 10px 20px 0;
+
+    border-top: 2px solid rgba(0,0,0,.1);
+    border-bottom: 2px solid rgba(0,0,0,.1);
+}
+.produto-container .produto-container-main .produto-info .desconto-container div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.produto-container .produto-container-main .produto-info .desconto-container div .desconto-preco{
+    font-family: 'Outfit', sans-serif;
+    color: darkgreen;
+    font-size: 1.5em;
+    cursor: default;
+    margin-bottom: 10px;
+}
+.produto-container .produto-container-main .produto-info .desconto-container div .original{
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.7em;
+    font-weight: bold;
+    text-decoration: line-through;
+    color: red;
+    letter-spacing: 1px;
+    cursor: default;
+}
+.produto-container .produto-container-main .produto-info .desconto-container .desconto{
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5em;
+    background-color: darkred;
+    padding: 5px 10px;
+    color: #fff;
+    font-weight: bold;
+    cursor: default;
+}
+.produto-container .produto-container-main .produto-info .juros-span{
+    align-self: flex-start;
+    font-size: 1.2em;
+    font-family: 'Outfit', sans-serif;
+    color: rgba(0,0,0,.7);
+    margin-top: 20px;
+    padding-bottom: 5px;
+    cursor: default;
+    width: 100%;
+}
+
+.produto-container .produto-container-main .produto-info .comprar-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+.produto-container .produto-container-main .produto-info .comprar-container span{
+    color: rgba(0,0,0,.7);
+    font-family: 'Outfit', sans-serif;
+}
+.produto-container .produto-container-main .produto-info .comprar-container div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+.produto-container .produto-container-main .produto-info .comprar-container div input{
+    width: 100%;
+    padding:20px;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 5px;
+    outline: none;
+    background-color: rgb(255,255,255,.4);
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.3em;
+}
+.produto-container .produto-container-main .produto-info .comprar-container div button{
+    width: 100%;
+    padding:20px;
+    background-color: seagreen;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 5px;
+    margin-left: 10px;
+    font-family: 'Outfit', sans-serif;
+    color: #fff;
+    font-size: 1.3em;
+}
+
+.produto-container .produto-container-main .formas-de-pagamento{
+    width: 200px;
+    align-self: flex-start;
+    margin-top: 20px;
+}

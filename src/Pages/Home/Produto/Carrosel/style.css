@@ -1,0 +1,29 @@
+.carrosel-produto-container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.carrosel-produto-container .choice-image{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin: 0 20px 0 30px;
+}
+.carrosel-produto-container .choice-image img{
+    height: 70px;
+    width: 70px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.carrosel-produto-container .image-content{
+    width: 100%;
+}
+.carrosel-produto-container .image-content img{
+    height: 500px;
+    border-radius: 10px;
+    cursor: auto;
+}
