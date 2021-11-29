@@ -3,6 +3,7 @@ import './style.css'
 
 // Import Widgets
 import Carrosel from './Carrosel'
+import ItemProduto from '../../Widgets/ItemProduto'
 
 export default function Produto(){
     return(
@@ -29,7 +30,40 @@ export default function Produto(){
                     </div>
                     <img className='formas-de-pagamento' src='../assets/formas-de-pagamento.png' alt='Formas de Pagamento'/>
                 </div>  
-
+            </div>
+            <div className='produto-container-info'>
+                <div className='container-descricao'>
+                    <h2>Nome Produto </h2>
+                    <p> descricao: Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex ea commodo consequat.
+                        descricao: Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex ea commodo consequat.
+                        MAx 500 caracter
+                    </p>                    
+                </div>
+                <div className='container-caracteristicas'>
+                    <h2>Características do Produto</h2>
+                    <ul>
+                        <li><span>Max 131 PREMIUM 100% BORRACHA PREMIUM 100% BORRACHA PREMIUM 100% BORRACHA PREMIUM 100% BORRACHA PREMIUM 100% BORRACHA PREMIUM</span></li>
+                        <li><span>100% BORRACHA PREMIUM 100% BORRACHA PREMIUM 100% BORRACHA PREMIUM 100% BORRACHA PREMIUM 100% BORRACHA PREMIUM 100% BORRACHA PREMIUM</span></li>
+                        <li><span>100% BORRACHA PREMIUM 100% BORRACHA PREMIUM 100% BORRACHA PREMIUM 100% BORRACHA PREMIUM 100% BORRACHA PREMIUM 100% BORRACHA PREMIUM</span></li>
+                        <li><span>100% BORRACHA PREMIUM 100% BORRACHA PREMIUM 100% BORRACHA PREMIUM 100% BORRACHA PREMIUM 100% BORRACHA PREMIUM 100% BORRACHA PREMIUM</span></li>
+                        <li><span>100% BORRACHA PREMIUM 100% BORRACHA PREMIUM 100% BORRACHA PREMIUM 100% BORRACHA PREMIUM 100% BORRACHA PREMIUM 100% BORRACHA PREMIUM</span></li>
+                        <li><span>100% BORRACHA PREMIUM 100% BORRACHA PREMIUM 100% BORRACHA PREMIUM 100% BORRACHA PREMIUM 100% BORRACHA PREMIUM 100% BORRACHA PREMIUM</span></li>
+                        <li><span>100% BORRACHA PREMIUM 100% BORRACHA PREMIUM 100% BORRACHA PREMIUM 100% BORRACHA PREMIUM 100% BORRACHA PREMIUM 100% BORRACHA PREMIUM</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div className='container-produtos-relacionados'>
+                <ItemProduto/>
+                <ItemProduto/>
+                <ItemProduto/>
             </div>
 
         </div>
