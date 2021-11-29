@@ -9,6 +9,7 @@ import Main from '../Pages/Home/Main'
 import Erro from '../Pages/Erro'
 import Entrar from '../Pages/Entrar'
 import Produto from '../Pages/Home/Produto'
+import Carrinho from '../Pages/Home/Carrinho'
 
 export default function Rotas(){
     return(
@@ -18,6 +19,7 @@ export default function Rotas(){
                     <Route path='/' element={<Main/>}/>
                     <Route path='/entrar' element={<Entrar/>}/>
                     <Route path='/produto' element={<Produto/>}/>
+                    <Route path='/carrinho' element={<Carrinho/>}/>
                 </Route>
                 <Route path='*' element={<Erro/>} />
                 
