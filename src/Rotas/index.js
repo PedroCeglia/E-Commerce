@@ -8,6 +8,7 @@ import Home from '../Pages/Home'
 import Main from '../Pages/Home/Main'
 import Erro from '../Pages/Erro'
 import Entrar from '../Pages/Entrar'
+import Produto from '../Pages/Home/Produto'
 
 export default function Rotas(){
     return(
@@ -15,7 +16,8 @@ export default function Rotas(){
             <Routes>
                 <Route path='/' element={<Home/>}>
                     <Route path='/' element={<Main/>}/>
-                    <Route path='/entrar' element={<Entrar/>} />
+                    <Route path='/entrar' element={<Entrar/>}/>
+                    <Route path='/produto' element={<Produto/>}/>
                 </Route>
                 <Route path='*' element={<Erro/>} />
                 
