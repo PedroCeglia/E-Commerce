@@ -5,13 +5,15 @@
     justify-content: center;
     align-items: center;
 }
+
+/* Produto Container Main */
 .produto-container .produto-container-main{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
 }
 
+/* Produto Container Main Info */
 .produto-container .produto-container-main .produto-info{
     display: flex;
     flex-direction: column;
@@ -30,6 +32,7 @@
     cursor: default;
 }
 
+/* Produto Container Main Info Desconto */
 .produto-container .produto-container-main .produto-info .desconto-container{
     display: flex;
     justify-content: space-between;
@@ -83,6 +86,7 @@
     width: 100%;
 }
 
+/* Produto Container Main Info Comprar*/
 .produto-container .produto-container-main .produto-info .comprar-container{
     display: flex;
     flex-direction: column;
@@ -99,7 +103,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 .produto-container .produto-container-main .produto-info .comprar-container div input{
     width: 100%;
@@ -110,6 +114,9 @@
     background-color: rgb(255,255,255,.4);
     font-family: 'Outfit', sans-serif;
     font-size: 1.3em;
+}
+.produto-container .produto-container-main .produto-info .comprar-container div input[type=number]::-webkit-inner-spin-button{
+    opacity: 1;
 }
 .produto-container .produto-container-main .produto-info .comprar-container div button{
     width: 100%;
@@ -123,8 +130,119 @@
     font-size: 1.3em;
 }
 
+/* Produto Container Main Info Fomra de Pagamento */
 .produto-container .produto-container-main .formas-de-pagamento{
     width: 200px;
     align-self: flex-start;
     margin-top: 20px;
+}
+
+
+/* Produto Container Info  */
+.produto-container .produto-container-info{
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #dfeded;
+    margin: 20px 0;
+}
+
+/* Produto Container Info Descrição */
+.produto-container .produto-container-info .container-descricao{
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.produto-container .produto-container-info .container-descricao h2{
+    width: 90%;
+    text-align: center;
+    margin: 20px 0 10px;
+    font-family: 'Outfit', sans-serif;
+    text-transform: uppercase;
+}
+.produto-container .produto-container-info .container-descricao p{
+    width: 70%;
+    font-size: 1.2em;
+    color: rgba(0,0,0,.8);
+}
+
+/* Produto Container Info Caracteristicas */
+.produto-container .produto-container-info .container-caracteristicas{
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-left: 1px solid rgba(0,0,0,.2);
+}
+.produto-container .produto-container-info .container-caracteristicas h2{
+    width: 90%;
+    text-align: center;
+    margin: 20px 0 5px;
+    font-family: 'Outfit', sans-serif;
+    text-transform: uppercase;
+}
+.produto-container .produto-container-info .container-caracteristicas ul{
+    align-self: flex-start;
+    margin: 5px 20px;
+    
+}
+.produto-container .produto-container-info .container-caracteristicas ul li{
+    margin-left: 20px;
+    margin-top: 5px;
+}
+.produto-container .produto-container-info .container-caracteristicas ul li span{
+    color: rgba(0,0,0,.8);
+    font-size: 0.9em;
+    font-family: 'Outfit', sans-serif;
+}
+
+
+/* Produto Container Produtos Relacionados */
+.produto-container .container-produtos-relacionados{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Medias Query */
+
+@media all and (max-width:650px){
+    .produto-container .produto-container-main{
+        flex-direction: column;
+    }   
+}
+
+@media all and (max-width:500px){
+    .produto-container .produto-container-info{
+        flex-direction: column;
+    }
+    .produto-container .produto-container-info .container-caracteristicas{
+        border-left: 0 solid rgba(0,0,0,.2);
+        border-top: 1px solid rgba(0,0,0,.2);
+        padding-top: 10px;
+    }
+}
+
+@media all and (max-width:460px){
+    .produto-container .produto-container-main .produto-info{
+        width: 250px;
+        padding: 0;
+        margin: 0;
+    }
+    .produto-container .produto-container-info{
+        max-width: 280px;
+    }
+    .produto-container .produto-container-main .produto-info h2{
+        font-size: 1.5em;
+    }
 }
