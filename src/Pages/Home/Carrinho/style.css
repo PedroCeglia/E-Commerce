@@ -1,0 +1,73 @@
+.carrinho-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*Carrinho Conteiner Content */
+.carrinho-container .carrinho-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+/*Carrinho Conteiner Content Itens */
+.carrinho-container .carrinho-content .itens-carrinho-content{
+    width: 100%;
+    background-color: #dfeded;
+    border-radius: 10px;
+    padding: 10px;
+}
+.carrinho-container .carrinho-content .itens-carrinho-content td,
+.carrinho-container .carrinho-content .itens-carrinho-content th{
+    text-align: center;
+    border: 2px solid rgba(0,0,0,.7);
+    width: 100%;
+    max-width: 300px;
+    padding: 0 10px;
+}
+
+/*Carrinho Conteiner Content Valor */
+.carrinho-container .carrinho-content .valor-carrinho-content{
+    width: 100%;
+    min-width: 250px;
+
+    min-height: 300px;
+
+    border: 1px solid rgba(0,0,0,.1);
+    background-color: #dfeded;
+    
+    padding: 20px;
+    margin-left: 10px;
+    
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.carrinho-container .carrinho-content .valor-carrinho-content div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.carrinho-container .carrinho-content .valor-carrinho-content div span{
+    font-size: 0.9em;
+    color: rgb(128, 15, 15);
+    margin-bottom: 20px;
+}
+.carrinho-container .carrinho-content .valor-carrinho-content div span.valor{
+    font-size: 1.2em;
+    color: rgba(0,0,0,.6);
+}
+.carrinho-container .carrinho-content .valor-carrinho-content button{
+    margin-top: 10px;
+    border: 1px solid rgba(0,0,0,.1);
+    padding: 10px 20px;
+    background-color: #e7dae7;
+    border-radius: 5px;
+}
+
