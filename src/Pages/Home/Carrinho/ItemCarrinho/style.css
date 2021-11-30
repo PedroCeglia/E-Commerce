@@ -14,10 +14,15 @@
 }
 
 .td-remove-edit{
-    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 250px;
 }
 .td-remove-edit img{
     width: 20px;
+    display: inline;
     margin: 0 5px;
 }
 
@@ -25,4 +30,4 @@
     color: rgba(0,0,0,.7);
     font-size: 1.2em;
     font-family: 'Outfit', sans-serif;
-}
+} 
