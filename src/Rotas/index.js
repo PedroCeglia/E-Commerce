@@ -7,7 +7,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Home from '../Pages/Home'
 import Main from '../Pages/Home/Main'
 import Erro from '../Pages/Erro'
-import Entrar from '../Pages/Entrar'
+import Entrar from '../Pages/Home/Entrar'
 import Produto from '../Pages/Home/Produto'
 import Carrinho from '../Pages/Home/Carrinho'
 
@@ -21,6 +21,7 @@ export default function Rotas(){
                     <Route path='/produto' element={<Produto/>}/>
                     <Route path='/carrinho' element={<Carrinho/>}/>
                 </Route>
+                <Route path='/adm' element={<></>}></Route>
                 <Route path='*' element={<Erro/>} />
                 
             </Routes>
