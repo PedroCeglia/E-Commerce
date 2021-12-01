@@ -56,8 +56,6 @@ function App({dispatch}) {
     }
   },[userDatabase, dispatch, setUserInReduxStore])
 
-
-
   return (
     <Rotas/>
   );
