@@ -1,12 +1,15 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import './style.css'
 
 // Import React Router
-import { Outlet } from 'react-router'
+import { Outlet, useNavigate } from 'react-router'
 import { Link } from 'react-router-dom'
 
-//efQom6vXoPOIomBCavcIussgonl2
-export default function Home(){
+// Import React Redux
+import {connect} from 'react-redux'
+
+
+function Home({user}){
     
     // Toggle Menu
     function toggleMenu(){
@@ -19,8 +22,14 @@ export default function Home(){
         nav.classList.toggle('none')
     }
 
-
-
+    // Change To ADM Page
+    const navigate = useNavigate()
+    useEffect(()=>{
+        console.log(user)
+        if(user.user.id === 'efQom6vXoPOIomBCavcIussgonl2'){
+            navigate('/adm')
+        }
+    },[user, navigate])
 
     return(
         <div className='home-container'>
@@ -75,3 +84,4 @@ export default function Home(){
         </div>
     )
 }
+export default connect(state => ({user:state.user}))(Home)
