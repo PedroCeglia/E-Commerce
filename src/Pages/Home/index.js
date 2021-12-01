@@ -5,6 +5,7 @@ import './style.css'
 import { Outlet } from 'react-router'
 import { Link } from 'react-router-dom'
 
+//efQom6vXoPOIomBCavcIussgonl2
 export default function Home(){
     
     // Toggle Menu
@@ -19,6 +20,8 @@ export default function Home(){
     }
 
 
+
+
     return(
         <div className='home-container'>
             <header>
@@ -28,7 +31,6 @@ export default function Home(){
                 </Link>
                 <nav className='nav-main'>
                     <ul>
-                        <li><Link className='link first-list' to='/'>Home</Link></li>
                         <li><Link className='link' to='/carrinho'>Carrinho</Link></li>
                         <li><Link className='link' to='/'>Histórico</Link></li>
                         <li><Link className='link' to='/'>Categorias</Link></li>
@@ -39,7 +41,7 @@ export default function Home(){
                 <div className='toggle-container'>
                     <img onClick={toggleMenu} className='open' src='../assets/open-menu.png' alt='Open Menu icon'/>
                     <img onClick={toggleMenu} className='close none' src='../assets/close.png' alt='Close Menu icon'/>
-                    <nav className='nav-toggle none'>
+                    <nav onClick={toggleMenu} className='nav-toggle none'>
                         <ul>
                             <li><Link className='link first-list' to='/'>Home</Link></li>
                             <li><Link className='link' to='/carrinho'>Carrinho</Link></li>
@@ -50,8 +52,6 @@ export default function Home(){
                         </ul>
                     </nav>
                 </div>
-                
-
             </header>
             <div className='outlet-container'>
                 <Outlet/>
