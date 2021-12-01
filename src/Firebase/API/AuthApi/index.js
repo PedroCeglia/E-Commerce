@@ -5,6 +5,6 @@ import { auth } from "../../FirebaseConfig";
 import { onAuthStateChanged } from "@firebase/auth";
 
 // Listener User Auth
-function listenerUserAuth(setUser){
+export function listenerUserAuth(setUser){
     onAuthStateChanged(auth, user =>{setUser(user)})
 }
