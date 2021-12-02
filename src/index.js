@@ -7,7 +7,7 @@ import App from './App';
 import {Provider} from 'react-redux'
 
 // Import Store
-import store from './Redux/Store'
+import store from './Store/Duck'
 
 ReactDOM.render(
   <React.StrictMode>

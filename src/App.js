@@ -11,6 +11,7 @@ import {listenerUserAuth} from './Firebase/API/AuthApi'
 
 // Import DatabaseAPI
 import {getUserByIdListener} from './Firebase/API/DatabaseApi'
+import { userActions } from './Store/Duck/user';
 
 function App({dispatch}) {
 
@@ -29,32 +30,13 @@ function App({dispatch}) {
   },[userAuth])
 
   // Edit User In Redux Store
-  const setUserInReduxStore = useCallback( exist => {
-    if(exist !== false){
-      return {
-        type:'SET_USER',
-        user:{
-          exist:true,
-          user:userDatabase
-        }
-      }      
-    } else {
-      return {
-        type:'SET_USER',
-        user:{
-          exist:false,
-          user:{}
-        }
-      }
-    }
-  },[userDatabase])
   useEffect(()=>{
     if(userDatabase != null){
-      dispatch(setUserInReduxStore(true))
+      dispatch(userActions.setUser(true, userDatabase))
     } else{
-      dispatch(setUserInReduxStore(false))
+      dispatch(userActions.setUser(false, {}))
     }
-  },[userDatabase, dispatch, setUserInReduxStore])
+  },[userDatabase, dispatch])
 
   return (
     <Rotas/>
