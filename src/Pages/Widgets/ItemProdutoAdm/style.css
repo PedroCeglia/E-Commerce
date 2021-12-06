@@ -2,7 +2,7 @@
     width: 300px;
     height: 100%;
 
-    margin: 10px 0;
+    margin: 10px;
 
     display: flex;
     flex-direction: column;
@@ -17,10 +17,10 @@
     transition: all .4s;
 } 
 .container-item-produto-adm button{
-    width: 70%;
+    width: 100%;
     background-color: seagreen;
     border:1px solid rgba(0,0,0,.1);
-    margin-bottom: 10px;
+    margin: 0 10px 10px;
     border-radius: 5px;
 
     cursor: pointer;
@@ -33,11 +33,13 @@
     font-size: 1.2em;
     color: rgba(255,255,255,.9);
     margin-right: 5px;
+    margin-left: 5px;
 } 
 .container-item-produto-adm button img{
     width: 20px;
     height: 20px;
-    margin-bottom: 5px;
+    margin: 10px;
+    border-radius:0;
 } 
 .container-item-produto-adm div{
     display: flex;
@@ -70,8 +72,19 @@
     border-radius: 10px;
 }
 
+.container-item-produto-adm .container-item-produto-adm-buttons{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.container-item-produto-adm .container-item-produto-adm-buttons button.remove{
+    background-color:rgb(184, 7, 7) ;
+}
+ 
 
-@media all and (max-width:300px){
+@media all and (max-width:320px){
     .container-item-produto-adm{
         width: 250px;
     }

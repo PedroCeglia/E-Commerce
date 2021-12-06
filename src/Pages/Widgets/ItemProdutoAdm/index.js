@@ -9,10 +9,16 @@ export default function ItemProdutoAdm(){
                 <span className='produto'>Nome do Produto</span>
                 <span className='preco'>R$100<span>R$200</span></span>
             </div>
-            <button>
-                <span>Adicionar ao Carrinho</span>
-                <img src='assets/carrinho.png' alt='Carrinho Icon'/>
-            </button>
+            <div className='container-item-produto-adm-buttons'>
+                <button>
+                    <span>Editar</span>
+                    <img src='assets/pencil.png' alt='Edit Icon'/>
+                </button>
+                <button className='remove'>
+                    <span>Remove</span>
+                    <img src='assets/close.png' alt='Edit Icon'/>
+                </button>                
+            </div>
         </article>
     )
 }
