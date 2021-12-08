@@ -8,3 +8,8 @@ import { onAuthStateChanged } from "@firebase/auth";
 export function listenerUserAuth(setUser){
     onAuthStateChanged(auth, user =>{setUser(user)})
 }
+
+// LogOut User
+export function logOutUser(){
+    auth.signOut()
+}
