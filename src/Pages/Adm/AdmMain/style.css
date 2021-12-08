@@ -1,0 +1,110 @@
+/* Adm Container */
+.adm-container{
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    
+    background-color: #cfdfe7;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.adm-container h2 button{
+    background-color: seagreen;
+    border:1px solid rgba(0,0,0,.1);
+    margin: 0 10px 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color:  #fff;
+    font-size: 0.8em;
+
+    cursor: pointer;
+}
+
+/* Adm Container Carrosel */
+.adm-container .carrosel-adm-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 90%;
+    overflow-x: hidden;
+    margin-top: 20px;
+
+
+}
+.adm-container .carrosel-adm-container h2{
+    font-size: 2em;
+    font-family: 'Outfit', sans-serif;
+    color: rgba(0,0,0,.7);
+    margin-bottom: 10px;
+    padding-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+.adm-container .carrosel-adm-container .carrosel-adm-content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: flex-start;
+    overflow-x: auto;
+    width: 100%;
+}
+
+/* Adm Container Mais Vendidos  */
+.adm-container .mais-vendidos-adm-container{
+    border-top: 1px solid rgba(0,0,0,.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 40px 0;
+
+    width: 90%;
+}
+.adm-container .mais-vendidos-adm-container h2{
+    font-size: 2em;
+    font-family: 'Outfit', sans-serif;
+    color: rgba(0,0,0,.7);
+    margin-bottom: 10px;
+    padding-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+.adm-container .mais-vendidos-adm-container .mais-vendidos-adm-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adm Container Produtos  */
+.adm-container .produtos-adm-container{
+    border-top: 1px solid rgba(0,0,0,.1);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 90%;
+}
+.adm-container .produtos-adm-container h2{
+    font-size: 2em;
+    font-family: 'Outfit', sans-serif;
+    color: rgba(0,0,0,.7);
+    margin-bottom: 10px;
+    padding-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+.adm-container .produtos-adm-container .produtos-adm-content{    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
