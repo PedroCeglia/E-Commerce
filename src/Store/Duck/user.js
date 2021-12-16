@@ -4,16 +4,14 @@ const typeList = {
 
 // Initial State Store
 const INITIAL_STATE = {
-    user:{
-        exist:false,
-        user:{}
-    }
+    exist:false,
+    user:{}
 }
 
 // Reducer Store
 export default function user(state=INITIAL_STATE, action){
     if(action.type === typeList.SET){
-        return{...state, user:action.user}
+        return action.user
     }
     return state
 }
