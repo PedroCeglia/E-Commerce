@@ -1,0 +1,86 @@
+/* Adm Container Choice */
+.adm-container .choice-adm-container{
+    display: none;
+    
+}
+.adm-container .choice-adm-container.active{
+
+    position: fixed;
+    top: 5vh;
+    left: 15vw;
+
+    width: 70vw;
+    height: 90vh;
+    min-width: 250px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    border: 3px solid rgba(0,0,0,.1);
+    background-color: #f8efed;
+
+    z-index:10;
+
+    padding: 10px 20px;
+
+    overflow-y: auto;
+
+}
+.adm-container .choice-adm-container .close-choice{
+    width: 20px;
+    height: 20px;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.adm-container .choice-adm-container .add-adm-container-edit-list{
+    display: block;
+}
+.adm-container .choice-adm-container .add-adm-container-edit-list.none{
+    display: none;
+}
+
+.adm-container .choice-adm-container .choice-content-adm{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    overflow: auto;
+    width: 100%;
+ 
+}
+.adm-container .choice-adm-container h2{
+    display: block;
+    color: rgba(0,0,0,.7);
+    font-size: 2em;
+    font-family: 'Outfit', sans-serif;
+    width: 60vw;
+    text-align: center;
+    margin: 20px 0 10px;   
+
+}
+
+.adm-container .choice-adm-container h2.border{
+    padding-top: 10px;
+    border-top: 2px solid rgba(0,0,0,.7); 
+}
+
+/* Adm Container Block Choice */
+.adm-container .block-choice-adm{
+    display: none;
+}
+.adm-container .block-choice-adm.active{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+
+    background-color: rgba(0,0,0,.9);
+    z-index: 9;
+
+    display: block;
+}
