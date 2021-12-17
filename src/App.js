@@ -10,8 +10,11 @@ import Rotas from './Rotas';
 import {listenerUserAuth} from './Firebase/API/AuthApi'
 
 // Import DatabaseAPI
-import {getUserByIdListener} from './Firebase/API/DatabaseApi'
+import {getUserByIdListener, getProdutosInDatabase, getProdutoCarrosel, getProdutoMaisVendidos} from './Firebase/API/DatabaseApi'
+
+// Import Redux Actions
 import { userActions } from './Store/Duck/user';
+import {produtoActions} from './Store/Duck/produtos'
 
 function App({dispatch}) {
 
@@ -26,6 +29,8 @@ function App({dispatch}) {
   useEffect(()=>{
     if(userAuth != null){
       getUserByIdListener(userAuth.uid, setUserDatabase)
+    } else{
+      setUserDatabase(null)
     }
   },[userAuth])
 
@@ -37,6 +42,33 @@ function App({dispatch}) {
       dispatch(userActions.setUser(false, {}))
     }
   },[userDatabase, dispatch])
+
+  // Get Produtos
+  const [produtoList, setProdutosList] = useState([])
+  useEffect(()=>{
+    getProdutosInDatabase(setProdutosList)
+  },[]) 
+  useEffect(()=>{
+    dispatch(produtoActions.setProdutos(produtoList))
+  },[produtoList, dispatch])
+
+  // Get Produtos Mais Vendidos
+  const [maisVendidosList, setMaisVendidosList] = useState([])
+  useEffect(()=>{
+    getProdutoMaisVendidos(setMaisVendidosList)
+  },[]) 
+  useEffect(()=>{
+    dispatch(produtoActions.setProdutosMaisVendidos(maisVendidosList))
+  },[maisVendidosList, dispatch])
+
+  // Get Produtos Carrosel
+  const [carroselList, setCarroselList] = useState([])
+  useEffect(()=>{
+    getProdutoCarrosel(setCarroselList)
+  },[]) 
+  useEffect(()=>{
+    dispatch(produtoActions.setProdutosCarrosel(carroselList))
+  },[carroselList, dispatch])
 
   return (
     <Rotas/>
