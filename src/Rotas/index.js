@@ -17,6 +17,7 @@ import Erro from '../Pages/Erro'
 import Adm from '../Pages/Adm'
 import AdmMain from '../Pages/Adm/AdmMain'
 import AddProduto from '../Pages/Adm/AddProduto'
+import EditProdutosList from '../Pages/Adm/EditProdutosList'
 
 export default function Rotas(){
     return(
@@ -31,6 +32,7 @@ export default function Rotas(){
                 <Route path='/adm' element={<Adm/>}>
                     <Route path='/adm' element={<AdmMain/>}/>
                     <Route path='/adm/add/produto' element={<AddProduto/>}/>
+                    <Route path='/adm/edit/list' element={<EditProdutosList/>}/>
                 </Route>
                 <Route path='*' element={<Erro/>} />
                 
