@@ -67,7 +67,7 @@ export function getProdutosInDatabase(setProdutosList){
 
 // Get Produto By Id
 export function getProdutoById(id, setProduto){
-    onValue(ref(database,`anuncios/produto/${id}`), snapshot => {
+    onValue(ref(database,`anuncios/produtos/${id}`), snapshot => {
         if(snapshot.exists()){
             setProduto(snapshot.val())
         }
@@ -75,11 +75,9 @@ export function getProdutoById(id, setProduto){
 }
 
 // Add Produto In Carrosel 
-export function addProdutoInCarrosel(id, foto, nome){
+export function addProdutoInCarrosel(id){
     update(ref(database,`anuncios/carrosel/${id}`),{
-        id:id,
-        foto:foto,
-        nome:nome
+        id:id
     })
 }
 
@@ -89,15 +87,39 @@ export function removeProdutoInCarrosel(id){
 }
 
 // Add Produto In Mais Vendidos 
-export function addProdutoInMaisVendidos(id, foto, nome){
+export function addProdutoInMaisVendidos(id){
     update(ref(database,`anuncios/maisVendidos/${id}`),{
-        id:id,
-        foto:foto,
-        nome:nome
+        id:id
     })
 }
 
 // Remove Produto In Mais Vendidos
 export function removeProdutoInMaisVendidos(id){
     remove(ref(database,`anuncios/maisVendidos/${id}`))
+}
+
+// Get Produtos Carrosel
+export function getProdutoCarrosel(setProdutos){
+    onValue(ref(database,`anuncios/carrosel`), snapshot => {
+        let listProdutos = []
+        if(snapshot.exists()){
+            snapshot.forEach(produto => {
+                listProdutos.push(produto.val())
+            })
+        }
+        setProdutos(listProdutos)
+    })
+}
+
+// Get Produtos Mais Vendidos
+export function getProdutoMaisVendidos(setProdutos){
+    onValue(ref(database,`anuncios/maisVendidos`), snapshot => {
+        let listProdutos = []
+        if(snapshot.exists()){
+            snapshot.forEach(produto => {
+                listProdutos.push(produto.val())
+            })
+        }
+        setProdutos(listProdutos)
+    })
 }
