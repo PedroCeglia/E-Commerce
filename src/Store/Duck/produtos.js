@@ -18,10 +18,10 @@ export default function produtos(state=INITIAL_STATE, action){
         return{...state, produtos:action.produtos}
     }
     if(action.type === typeList.SET_MAIS_VENDIDOS){
-        return{...state, maisVendidos:action.produtos}
+        return{...state, maisVendidos:action.maisVendidos}
     }
     if(action.type === typeList.SET_CARROSEL){
-        return{...state, carrosel:action.produtos}
+        return{...state, carrosel:action.carrosel}
     }
     return(state)
 }
