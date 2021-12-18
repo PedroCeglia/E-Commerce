@@ -18,7 +18,7 @@ function EditProdutoList({produtos, carrosel, maisVendidos}){
     const navigate = useNavigate()
     // Open Choice Area
     function toggleChoice(){
-        navigate(-2)
+        navigate('/adm')
     }
 
     // Get List Type
