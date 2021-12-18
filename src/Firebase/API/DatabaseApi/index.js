@@ -123,3 +123,26 @@ export function getProdutoMaisVendidos(setProdutos){
         setProdutos(listProdutos)
     })
 }
+
+// Add Produto In Carrinho
+export function addProdutoInCarrinho(id, idProduto){
+    update(ref(database,`carrinho/${id}/${idProduto}`),{
+        id:idProduto
+    })
+}
+
+// Get Carrinho
+export function getProdutoCarrinho(id, setCarrinho){
+    onValue(ref(database,`carrinho/${id}`), snapshot => {
+        let carrinhoList = []
+        if(snapshot.exists()){
+            snapshot.forEach(produtoId=>{carrinhoList.push(produtoId.val())})
+        }
+        setCarrinho(carrinhoList)
+    })
+}
+
+// Remover Item do Carrinho
+export function removeProdutoInCarrinho(id, idProduto){
+    remove(ref(database,`carrinho/${id}/${idProduto}`))
+}
