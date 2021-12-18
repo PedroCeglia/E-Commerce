@@ -44,7 +44,7 @@ function Adm({user}){
     }
 
     return(
-        <div className='home-container'>
+        <div className='home-container '>
             <header>
                 <Link to='/' className='logo-container'>
                    <img src='../assets/logo.png' alt='Logo Icon'/>
