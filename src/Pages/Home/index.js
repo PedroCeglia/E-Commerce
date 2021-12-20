@@ -8,6 +8,9 @@ import { Link } from 'react-router-dom'
 // Import React Redux
 import {connect} from 'react-redux'
 
+// Import Widgets
+import MenuList from './MenuList'
+
 
 function Home({user}){
     
@@ -25,7 +28,6 @@ function Home({user}){
     // Change To ADM Page
     const navigate = useNavigate()
     useEffect(()=>{
-        console.log(user)
         if(user.user.id === 'efQom6vXoPOIomBCavcIussgonl2'){
             navigate('/adm')
         }
@@ -39,26 +41,13 @@ function Home({user}){
                    <span>TecNine</span> 
                 </Link>
                 <nav className='nav-main'>
-                    <ul>
-                        <li><Link className='link' to='/carrinho'>Carrinho</Link></li>
-                        <li><Link className='link' to='/'>Histórico</Link></li>
-                        <li><Link className='link' to='/'>Categorias</Link></li>
-                        <li><Link className='link' to='/entrar'>Entrar</Link></li>
-                        <li><Link className='link' to='/'>Contato</Link></li>
-                    </ul>
+                    <MenuList/>
                 </nav>
                 <div className='toggle-container'>
                     <img onClick={toggleMenu} className='open' src='../assets/open-menu.png' alt='Open Menu icon'/>
                     <img onClick={toggleMenu} className='close none' src='../assets/close.png' alt='Close Menu icon'/>
                     <nav onClick={toggleMenu} className='nav-toggle none'>
-                        <ul>
-                            <li><Link className='link first-list' to='/'>Home</Link></li>
-                            <li><Link className='link' to='/carrinho'>Carrinho</Link></li>
-                            <li><Link className='link' to='/'>Histórico</Link></li>
-                            <li><Link className='link' to='/'>Categorias</Link></li>
-                            <li><Link className='link' to='/entrar'>Entrar</Link></li>
-                            <li><Link className='link' to='/'>Contato</Link></li>
-                        </ul>
+                        <MenuList/>
                     </nav>
                 </div>
             </header>
@@ -71,14 +60,7 @@ function Home({user}){
                    <span>TecNine</span> 
                 </Link>
                 <nav className='nav-main'>
-                    <ul>
-                        <li><Link className='link first-list' to='/'>Home</Link></li>
-                        <li><Link className='link' to='/carrinho'>Carrinho</Link></li>
-                        <li><Link className='link' to='/'>Histórico</Link></li>
-                        <li><Link className='link' to='/'>Categorias</Link></li>
-                        <li><Link className='link' to='/entrar'>Entrar</Link></li>
-                        <li><Link className='link' to='/'>Contato</Link></li>
-                    </ul>
+                    <MenuList/>
                 </nav>
             </footer>
         </div>
