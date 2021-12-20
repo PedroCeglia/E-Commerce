@@ -50,7 +50,7 @@ header .nav-main ul{
     margin-right: 10px;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-end;
 }
 header .nav-main ul li{
     margin-bottom: 10px;
@@ -70,10 +70,22 @@ header .nav-main ul li .link{
     border-top: 3px solid #20549c36;
     border-left: 1px solid #20549c36; 
     border-right: 1px solid #20549c36;
+    background-color: transparent;
+    border-bottom: none;
     transition: background-color 1s, padding 1s;
 }
 header .nav-main ul li .link.first-list{
        border-left: 2px solid #20549c36; 
+}
+header .nav-main ul li .link.noclick{
+    border-top: 3px solid #20549c36;
+    border-left: 1px solid #20549c36; 
+    border-right: 1px solid #20549c36;
+    padding: 10px 20px 3px;
+}
+header .nav-main ul li .link.noclick:hover{
+    background-color: transparent;
+    padding-bottom: 5px;
 }
 header .nav-main ul li .link:hover{
     background-color: rgba(255,255,255,.4);
@@ -208,6 +220,12 @@ footer .nav-main ul li .link{
     border-right: 1px solid rgba(255,255,255,.4);
     transition: background-color 1s, padding 1s;
 }
+footer nav ul li .link.noclick{
+    border-top: 3px solid rgba(255,255,255,.4);
+    border-bottom: 3px solid rgba(255,255,255,.4);
+    border-left: 1px solid rgba(255,255,255,.4); 
+    border-right: 1px solid rgba(255,255,255,.4);
+}
 footer .nav-main ul li .link.first-list{
        border-left: 2px solid rgba(255,255,255,.4); 
 }
@@ -216,6 +234,19 @@ footer .nav-main ul li .link:hover{
     padding-top: 15px;
     padding-bottom: 15px;
 }
+footer nav ul li .link.noclick:hover{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+nav ul li .link.noclick{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
 
 /* Media Query`s */
 @media all and (max-width:855px){
