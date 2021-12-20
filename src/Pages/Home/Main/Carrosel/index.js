@@ -1,6 +1,9 @@
 import React from 'react'
 import './style.css'
 
+// Import Widgets
+import ItemProduto from '../../../Widgets/ItemProduto';
+
 // Direct React component imports
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
 import 'swiper/swiper.min.css'
@@ -10,7 +13,9 @@ import SwiperCore,{ Navigation, Pagination, Autoplay} from 'swiper';
 // install Swiper modules
 SwiperCore.use([Pagination,Navigation,Autoplay]);
 
-export default function Carrosel(){
+
+
+export default function Carrosel(props){
     return(
         <Swiper className='carrosel-produtos'
             // install Swiper modules
@@ -45,7 +50,24 @@ export default function Carrosel(){
                 }
               }}
         >
-            <SwiperSlide className='slide'>
+            {
+                props.list.map((produto, key )=> {
+                    return(
+                        <SwiperSlide className='slide'>
+                            <ItemProduto
+                                id={produto.id}
+                                key={key}
+                            />
+                        </SwiperSlide>
+                        
+                    )
+                })
+            } 
+        </Swiper>
+    )
+}
+/*
+<SwiperSlide className='slide'>
                 <img src='../assets/fone-de-ouvido-jbl.jpeg' alt='Produto'/>
                 <span>HeadSet JBL1</span>
             </SwiperSlide>
@@ -68,7 +90,5 @@ export default function Carrosel(){
             <SwiperSlide className='slide'>
                 <img src='../assets/fone-de-ouvido-jbl.jpeg' alt='Produto'/>
                 <span>HeadSet JBL6</span>
-            </SwiperSlide>                
-        </Swiper>
-    )
-}
+            </SwiperSlide>            
+*/
