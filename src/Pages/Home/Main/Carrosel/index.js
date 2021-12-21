@@ -53,10 +53,9 @@ export default function Carrosel(props){
             {
                 props.list.map((produto, key )=> {
                     return(
-                        <SwiperSlide className='slide'>
+                        <SwiperSlide className='slide' key={key}>
                             <ItemProduto
                                 id={produto.id}
-                                key={key}
                             />
                         </SwiperSlide>
                         
