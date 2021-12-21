@@ -125,9 +125,10 @@ export function getProdutoMaisVendidos(setProdutos){
 }
 
 // Add Produto In Carrinho
-export function addProdutoInCarrinho(id, idProduto){
+export function addProdutoInCarrinho(id, idProduto, qnt){
     update(ref(database,`carrinho/${id}/${idProduto}`),{
-        id:idProduto
+        id:idProduto,
+        qnt:qnt
     })
 }
 
