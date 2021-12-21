@@ -1,8 +1,13 @@
 .carrosel-produto-container{
     margin-top: 20px;
+    margin-left: 10px;
+    padding: 20px;
+    height: 100%;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    background-color: #dfeded;
+    border-radius: 10px;
 }
 .carrosel-produto-container .choice-image{
     display: flex;
@@ -26,7 +31,13 @@
     align-items: center;
 }
 .carrosel-produto-container .image-content img{
-    height: 500px;
+    max-height: 500px;
+    max-width: 500px;
+    min-width: 300px;
+    min-height: 300px;
+    height: 100%;
+    width: 100%;
+
     border-radius: 10px;
     cursor: auto;
 }
