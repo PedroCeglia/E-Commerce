@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import './style.css'
 
 // Import React Router
@@ -7,6 +7,9 @@ import { Link } from 'react-router-dom'
 
 // Import React Redux
 import {connect} from 'react-redux'
+
+// Import Database API
+import {getProdutoCarrinho} from '../../Firebase/API/DatabaseApi'
 
 // Import Widgets
 import MenuList from './MenuList'
@@ -28,10 +31,19 @@ function Home({user}){
     // Change To ADM Page
     const navigate = useNavigate()
     useEffect(()=>{
-        if(user.user.id === 'efQom6vXoPOIomBCavcIussgonl2'){
+        if(user.user.id === 'efQom6vXoPOIomBCavcIussgonl2'){        
             navigate('/adm')
         }
-    },[user, navigate])
+    },[user.user, navigate])
+
+    // Get Carrinho
+    const [carrinho, setCarrinho] = useState([])
+    useEffect(()=>{
+        if(user.exist){
+            getProdutoCarrinho(user.user.id, setCarrinho)
+        }
+    },[user])
+ 
 
     return(
         <div className='home-container'>
@@ -52,7 +64,9 @@ function Home({user}){
                 </div>
             </header>
             <div className='outlet-container'>
-                <Outlet/>
+                <Outlet
+                    carrinho={carrinho}
+                />
             </div>
             <footer>
                 <Link to='/' className='logo-container'>
