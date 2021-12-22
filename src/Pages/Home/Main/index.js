@@ -28,7 +28,7 @@ function Main({produtos, carrosel, maisVendidos}){
                 }
             </section>
             <h2>Outros Produtos</h2>
-            <section className='categorias'>
+            <section className='mais-vendidos'>
             {
                     produtos.map((produto, key) => {
                         return(
