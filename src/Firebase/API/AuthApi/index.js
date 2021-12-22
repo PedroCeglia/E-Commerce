@@ -68,7 +68,10 @@ export function userCreate(name, email, password){
                     break
                 case 'auth/weak-password':
                     alert('Digite uma senha com no minimo 6 digitos')
-                    break        
+                    break   
+                case 'auth/email-already-in-use':
+                    alert('O email ja esta sendo utlizado')
+                    break     
                 default:
                     alert('Erro Prencha todos os Campos de Forma Correta')
                     break                             
