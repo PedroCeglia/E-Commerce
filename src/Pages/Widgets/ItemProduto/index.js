@@ -6,7 +6,6 @@ import {useNavigate} from 'react-router'
 
 // Import Database API
 import {getProdutoById} from '../../../Firebase/API/DatabaseApi'
-import Produto from '../../Home/Produto'
 
 export default function ItemProduto(props){
 
@@ -16,7 +15,7 @@ export default function ItemProduto(props){
         if(props.id != null){
             getProdutoById(props.id, setProduto)
         }
-    },[])
+    },[props.id])
 
     // Get Produto Date
     const [produtoName, setProdutoName] = useState('nome produto')

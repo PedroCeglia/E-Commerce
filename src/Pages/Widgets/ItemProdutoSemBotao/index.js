@@ -12,7 +12,7 @@ export default function ItemProdutoSemBotao(props){
         if(props.id != null){
             getProdutoById(props.id, setProduto)
         }
-    },[])
+    },[props.id])
 
     // Get Produto Date
     const [produtoName, setProdutoName] = useState('nome produto')

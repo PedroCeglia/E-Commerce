@@ -6,13 +6,14 @@ import {getProdutoById } from '../../../Firebase/API/DatabaseApi'
 
 export default function ItemProdutoAdm(props){
 
+    const id = props.id
     // Get Produto By Id
     const [produto, setProduto] = useState()
     useEffect(()=>{
-        if(props.id != null){
-            getProdutoById(props.id, setProduto)
+        if(id != null){
+            getProdutoById(id, setProduto)
         }
-    },[])
+    },[id])
 
     // Get Produto Date
     const [produtoName, setProdutoName] = useState('nome produto')
@@ -45,7 +46,7 @@ export default function ItemProdutoAdm(props){
         }
     },[produto])
 
-    // Deletando
+    // Deletando 
     function deleteProduto(){
         if(props.id != null && props.delete != null){
             props.delete(props.id)
