@@ -47,9 +47,8 @@ function EditProdutoList({produtos, carrosel, maisVendidos}){
         } else if(listType === 'produtos'){
             setList(produtos)
             seForProduto()
-
         }
-    },[listType])
+    },[listType, carrosel, maisVendidos, produtos])
 
     function seForProduto(){
         const container = document.querySelector('.add-adm-container-edit-list')
