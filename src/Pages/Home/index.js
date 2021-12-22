@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect} from 'react'
 import './style.css'
 
 // Import React Router
@@ -15,7 +15,7 @@ import {getProdutoCarrinho} from '../../Firebase/API/DatabaseApi'
 import MenuList from './MenuList'
 
 
-function Home({user}){
+function Home(props){
     
     // Toggle Menu
     function toggleMenu(){
@@ -31,18 +31,17 @@ function Home({user}){
     // Change To ADM Page
     const navigate = useNavigate()
     useEffect(()=>{
-        if(user.user.id === 'efQom6vXoPOIomBCavcIussgonl2'){        
+        if(props.user.user.id === 'efQom6vXoPOIomBCavcIussgonl2'){        
             navigate('/adm')
         }
-    },[user.user, navigate])
+    },[props.user.user, navigate])
 
     // Get Carrinho
-    const [carrinho, setCarrinho] = useState([])
     useEffect(()=>{
-        if(user.exist){
-            getProdutoCarrinho(user.user.id, setCarrinho)
+        if(props.user.exist && props.setCarrinho != null){
+            getProdutoCarrinho(props.user.user.id, props.setCarrinho)
         }
-    },[user])
+    },[props.user, props.setCarrinho])
  
 
     return(
@@ -64,9 +63,7 @@ function Home({user}){
                 </div>
             </header>
             <div className='outlet-container'>
-                <Outlet
-                    carrinho={carrinho}
-                />
+                <Outlet />
             </div>
             <footer>
                 <Link to='/' className='logo-container'>
