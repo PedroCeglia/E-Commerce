@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 // Import React Router Dom
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
@@ -20,14 +20,15 @@ import AddProduto from '../Pages/Adm/AddProduto'
 import EditProdutosList from '../Pages/Adm/EditProdutosList'
 
 export default function Rotas(){
+    const [carrinho, setCarrinho] = useState([])
     return(
         <BrowserRouter>
             <Routes>
-                <Route path='/' element={<Home/>}>
+                <Route path='/' element={<Home setCarrinho={setCarrinho}/>}>
                     <Route path='/' element={<Main/>}/>
                     <Route path='/entrar' element={<Entrar/>}/>
                     <Route path='/produto' element={<Produto/>}/>
-                    <Route path='/carrinho' element={<Carrinho/>}/>
+                    <Route path='/carrinho' element={<Carrinho carrinho={carrinho}/>}/>
                 </Route>
                 <Route path='/adm' element={<Adm/>}>
                     <Route path='/adm' element={<AdmMain/>}/>
