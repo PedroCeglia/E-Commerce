@@ -11,6 +11,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 /* Produto Container Main Info */
@@ -128,6 +129,7 @@
     font-family: 'Outfit', sans-serif;
     color: #fff;
     font-size: 1.3em;
+    cursor: pointer;
 }
 
 /* Produto Container Main Info Fomra de Pagamento */
@@ -170,7 +172,15 @@
     width: 70%;
     font-size: 1.2em;
     color: rgba(0,0,0,.8);
+    margin-top: 10px;
+    text-align: center;
 }
+.produto-container .produto-container-info .container-descricao p span.block-item{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
 
 /* Produto Container Info Caracteristicas */
 .produto-container .produto-container-info .container-caracteristicas{
@@ -190,7 +200,7 @@
     text-transform: uppercase;
 }
 .produto-container .produto-container-info .container-caracteristicas ul{
-    align-self: flex-start;
+    align-self: center;
     margin: 5px 20px;
     
 }
@@ -200,7 +210,7 @@
 }
 .produto-container .produto-container-info .container-caracteristicas ul li span{
     color: rgba(0,0,0,.8);
-    font-size: 0.9em;
+    font-size: 1em;
     font-family: 'Outfit', sans-serif;
 }
 
