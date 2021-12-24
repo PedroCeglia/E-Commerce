@@ -45,8 +45,8 @@ function Produto({user}){
     const [caracteristicaList, setCaracteristicaList] = useState([])
     const [produtoName, setProdutoName] = useState('Produto Name')
     const [fotoList, setFotoList] = useState([])
-    const [precoOg, setPrecoOg] = useState('R$100')
-    const [precoPromo, setPrecoPromo] = useState('R$100')
+    const [precoOg, setPrecoOg] = useState('100')
+    const [precoPromo, setPrecoPromo] = useState('100')
     const [promoPorc, setPromoPorc] = useState('50%')
     const [descricao, setDescricao] = useState([])
     useEffect(()=>{
@@ -58,21 +58,21 @@ function Produto({user}){
             setCaracteristicaList(produto.caracteristicas)
             if(produto.precoOg.indexOf('0') === 0){
                 const precoOgEdit = produto.precoOg.substring(1,6)
-                setPrecoOg('R$' + precoOgEdit)
+                setPrecoOg(precoOgEdit)
             } else{
-                setPrecoOg('R$' + produto.precoOg)
+                setPrecoOg(produto.precoOg)
             }
             if(produto.precoPromo.indexOf('0') === 0){
                 const precoPromoEdit = produto.precoPromo.substring(1,6)
-                setPrecoPromo('R$' + precoPromoEdit)
+                setPrecoPromo(precoPromoEdit)
             } else{
-                setPrecoPromo('R$' + produto.precoPromo)
+                setPrecoPromo(produto.precoPromo)
             }
         }else{
             setFotoList([])
             setProdutoName('Produto Name')
-            setPrecoOg('R$200')
-            setPrecoPromo('R$100')
+            setPrecoOg('200')
+            setPrecoPromo('100')
             setPromoPorc('50%')
             setDescricao([])
             setCaracteristicaList([
@@ -88,10 +88,11 @@ function Produto({user}){
     },[produto])
  
 
-    // Add In Car
+    // Add In Car 
     function addInCar(){
         if(user.exist && produto != null){
-            addProdutoInCarrinho(user.user.id, produto.id, qntProduto)
+            const total = parseInt(precoPromo) * qntProduto
+            addProdutoInCarrinho(user.user.id, produto.id, qntProduto, total)
             navigate('/carrinho')
         } else if (user.exist !== true){
             navigate('/entrar')
@@ -108,8 +109,8 @@ function Produto({user}){
                     <h2>{produtoName}</h2>
                     <div className='desconto-container'>
                         <div>
-                            <span className='desconto-preco'>{precoPromo}</span>
-                            <span className='original'>{precoOg}</span>
+                            <span className='desconto-preco'>R${precoPromo}</span>
+                            <span className='original'>R${precoOg}</span>
                             <span className='juros-span'>Em até 8x sem juros</span>
                         </div>
                         <span className='desconto'>-{promoPorc}</span>

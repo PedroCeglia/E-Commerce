@@ -16,10 +16,7 @@ function MenuList({user}){
             <ul>
                 <li><Link className='link first-list' to='/'>Home</Link></li>
                 <li><Link className='link' to='/carrinho'>Carrinho</Link></li>
-                <li><Link className='link' to='/'>Histórico</Link></li>
-                <li><Link className='link' to='/'>Categorias</Link></li>
                 <li onClick={logOutUser}><button className='link noclick'>Sair</button></li>
-                <li><Link className='link' to='/'>Contato</Link></li>
             </ul>
         )
     }else{
@@ -27,10 +24,7 @@ function MenuList({user}){
             <ul>
                 <li><Link className='link first-list' to='/'>Home</Link></li>
                 <li><Link className='link' to='/carrinho'>Carrinho</Link></li>
-                <li><Link className='link' to='/'>Histórico</Link></li>
-                <li><Link className='link' to='/'>Categorias</Link></li>
                 <li><Link className='link' to='/entrar'>Entrar</Link></li>
-                <li><Link className='link' to='/'>Contato</Link></li>
             </ul>
         )
     }
